@@ -1,9 +1,10 @@
+import 'package:emad_app/constant/colors.dart';
 import 'package:flutter/material.dart';
 
 class AppThemes {
   AppThemes._();
 
-  static const Color dodgerBlue = Color.fromRGBO(29, 161, 242, 1);
+  static const Color dodgerBlue = MyColors.lightGreenColor;
   static const Color whiteLilac = Color.fromRGBO(248, 250, 252, 1);
   static const Color blackPearl = Color.fromRGBO(30, 31, 43, 1);
   static const Color brinkPink = Color.fromRGBO(255, 97, 136, 1);

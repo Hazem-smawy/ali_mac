@@ -59,7 +59,7 @@ class _MainPageScreenState extends State<MainPageScreen> {
       onHorizontalDragStart: (details) => isDragging = true,
       onHorizontalDragUpdate: (details) {
         if (!isDragging) return;
-        const delta = 1;
+        const delta = -3;
         if (details.delta.dx < delta) {
           openDrawer();
         } else if (details.delta.dx > -delta) {

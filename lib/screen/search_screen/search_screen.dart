@@ -34,14 +34,15 @@ class SearchScreen extends StatelessWidget {
                 child: TextField(
                   textDirection: TextDirection.rtl,
                   textAlign: TextAlign.right,
-                  style: myTextStyles.title1.copyWith(
+                  style: myTextStyles.title2.copyWith(
                     color: MyColors.bg,
+                    fontWeight: FontWeight.normal,
                   ),
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     hintText: '... البحث عن ',
                     hintStyle: myTextStyles.body.copyWith(
-                      color: MyColors.containerColor,
+                      color: MyColors.secondaryTextColor,
                     ),
                   ),
                 ),
