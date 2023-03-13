@@ -1,4 +1,5 @@
 import 'package:emad_app/constant/colors.dart';
+import 'package:emad_app/contact/contact_screen.dart';
 import 'package:emad_app/model/drawer_item.dart';
 import 'package:emad_app/screen/home/home.dart';
 import 'package:emad_app/screen/notification_screen.dart/notification_screen.dart';
@@ -30,7 +31,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
     const MyHomeScreen(),
     const SearchScreen(),
     const NotificationScreen(),
-    const VideoDetailsScreen(),
+    const ContactScreen(),
   ];
   @override
   void initState() {

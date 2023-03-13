@@ -27,40 +27,7 @@ class NotificationScreen extends StatelessWidget {
           const SizedBox(
             height: 40,
           ),
-          Stack(
-            clipBehavior: Clip.none,
-            children: [
-              Container(
-                height: 60,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(
-                      color: Colors.black,
-                    )),
-              ),
-              Positioned(
-                  right: 20,
-                  top: -20,
-                  child: Container(
-                    //height: 30,
-                    width: 150,
-                    padding: const EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: MyColors.background,
-                        border: Border.all(
-                          color: Colors.black,
-                        )),
-                    child: Center(
-                      child: Text(
-                        ' لب اليوم',
-                        style: myTextStyles.subTitle
-                            .copyWith(fontWeight: FontWeight.normal),
-                      ),
-                    ),
-                  )),
-            ],
-          )
+         
         ],
       ),
     );
