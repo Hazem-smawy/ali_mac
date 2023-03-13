@@ -4,20 +4,20 @@ import 'package:flutter/material.dart';
 class myTextStyles {
   static const title1 = TextStyle(
     fontFamily: 'Cairo',
-    fontSize: 18,
+    fontSize: 16,
     color: MyColors.lessBlackColor,
     fontWeight: FontWeight.bold,
   );
   static const title2 = TextStyle(
     fontFamily: 'Cairo',
-    fontSize: 16,
+    fontSize: 14,
     color: MyColors.lessBlackColor,
     fontWeight: FontWeight.bold,
-    letterSpacing: 1.2,
+    letterSpacing: 1.1,
   );
   static const subTitle = TextStyle(
     fontFamily: 'Cairo',
-    fontSize: 14,
+    fontSize: 12,
     color: MyColors.secondaryTextColor,
     fontWeight: FontWeight.bold,
     letterSpacing: 1.2,
@@ -27,7 +27,7 @@ class myTextStyles {
     fontFamily: 'Cairo',
     fontSize: 12,
     color: MyColors.lightGreenColor,
-    fontWeight: FontWeight.bold,
+    //fontWeight: FontWeight.bold,
     letterSpacing: 1.2,
   );
 }

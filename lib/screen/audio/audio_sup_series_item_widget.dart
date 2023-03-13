@@ -41,8 +41,17 @@ class AudioSupSeriesItemWidget extends StatelessWidget {
               Row(
                 children: [
                   const FaIcon(
+                    FontAwesomeIcons.download,
+                    color: MyColors.lightGreenColor,
+                    size: 20,
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  const FaIcon(
                     FontAwesomeIcons.play,
                     color: MyColors.lightGreenColor,
+                    size: 20,
                   ),
                   const SizedBox(
                     width: 10,

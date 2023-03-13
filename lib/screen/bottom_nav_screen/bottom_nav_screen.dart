@@ -85,14 +85,17 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
         body: Stack(
           children: [
             pages[index],
+            //const SizedBox(height: 75),
+
             Positioned(
                 left: 0,
                 right: 0,
                 bottom: 0,
                 child: AnimatedContainer(
                   duration: const Duration(milliseconds: 250),
+                  height: 75,
                   padding: const EdgeInsets.only(
-                      left: 10, right: 10, bottom: 30, top: 20),
+                      left: 10, right: 10, bottom: 10, top: 5),
                   color: MyColors.bg,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,

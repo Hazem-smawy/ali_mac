@@ -20,7 +20,7 @@ class HomeShowMoreBtnsWidget extends StatelessWidget {
               backgroundColor: MyColors.lightGreenColor,
             ),
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(6.0),
               child: Text(
                 'صفحة المرئيات',
                 style: myTextStyles.title2.copyWith(color: MyColors.bg),
@@ -29,7 +29,7 @@ class HomeShowMoreBtnsWidget extends StatelessWidget {
           ),
           const Text(
             'سلاسل من المرئيات',
-            style: myTextStyles.title2,
+            style: myTextStyles.subTitle,
           )
         ],
       ),

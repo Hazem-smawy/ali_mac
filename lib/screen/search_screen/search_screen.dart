@@ -34,12 +34,16 @@ class SearchScreen extends StatelessWidget {
                 child: TextField(
                   textDirection: TextDirection.rtl,
                   textAlign: TextAlign.right,
+                  style: myTextStyles.title1.copyWith(
+                    color: MyColors.bg,
+                  ),
                   decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: '... البحث عن ',
-                      hintStyle: myTextStyles.body.copyWith(
-                        color: MyColors.containerColor,
-                      )),
+                    border: InputBorder.none,
+                    hintText: '... البحث عن ',
+                    hintStyle: myTextStyles.body.copyWith(
+                      color: MyColors.containerColor,
+                    ),
+                  ),
                 ),
               ),
               const SizedBox(width: 10),

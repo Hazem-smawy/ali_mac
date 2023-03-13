@@ -12,12 +12,6 @@ class HomeTitleWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        // Image.asset(
-        //   'assets/images/images5.jpg',
-        //   width: 50,
-        //   height: 50,
-        //   fit: BoxFit.cover,
-        // ),
         const FaIcon(
           FontAwesomeIcons.mosque,
           size: 30,
