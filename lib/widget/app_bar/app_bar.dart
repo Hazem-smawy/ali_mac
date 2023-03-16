@@ -1,4 +1,5 @@
 import 'package:emad_app/constant/colors.dart';
+import 'package:emad_app/constant/responsve.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -10,16 +11,16 @@ var myAppBar = AppBar(
   actions: [
     GestureDetector(
       onTap: () => Get.back(),
-      child: const Center(
+      child: Center(
         child: FaIcon(
           FontAwesomeIcons.arrowRightLong,
           color: MyColors.secondaryTextColor,
-          size: 20,
+          size: Responsive.iconSize,
         ),
       ),
     ),
-    const SizedBox(
-      width: 10,
+    SizedBox(
+      width: Responsive.myPadding,
     ),
   ],
 );

@@ -24,7 +24,7 @@ class VideoSupSeriesItemWidget extends StatelessWidget {
               width: double.infinity,
             ),
           ),
-          const Padding(
+           Padding(
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
             child: Text(
               'الفوائد العلمية المطرية في التعليقات لى الأربعين النووية  : الحلقة الثانية',
@@ -36,7 +36,7 @@ class VideoSupSeriesItemWidget extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          const Padding(
+           Padding(
             padding: EdgeInsets.symmetric(horizontal: 10),
             child: Text(
               'الفوائد العلمية المطرية في التعليقات لى الأربعين النووية  : الحلقة الثانية',

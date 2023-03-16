@@ -22,7 +22,7 @@ class VideoDetailsScreen extends StatelessWidget {
             ),
             Column(
               children: [
-                const Padding(
+                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                   child: Text(
                     'الفوائد العلمية المطرية في التعليقات على الأربعين النووية ة الرابعة',
@@ -34,7 +34,7 @@ class VideoDetailsScreen extends StatelessWidget {
                 const SizedBox(
                   height: 15,
                 ),
-                const Padding(
+                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10),
                   child: Text(
                     'الفوائد العلمية المطرية في التعليقات على الأربعين النووية ة الرابعة',
@@ -71,7 +71,7 @@ class VideoDetailsScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      const Text(
+                       Text(
                         'التفاصيل',
                         style: myTextStyles.subTitle,
                       ),

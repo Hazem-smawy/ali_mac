@@ -1,4 +1,5 @@
 import 'package:emad_app/constant/colors.dart';
+import 'package:emad_app/constant/responsve.dart';
 import 'package:emad_app/constant/shadows.dart';
 import 'package:emad_app/constant/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -18,20 +19,21 @@ class ArticleItemWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.all(10),
+            padding:  EdgeInsets.all(Responsive.space),
             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
-                    children: const [
+                    children: [
                       Text(
                         'استحباب الجمع بين الأذكار الواردة بعد الوضوء وفي الركوع والسجود',
                         textAlign: TextAlign.right,
                         textDirection: TextDirection.rtl,
                         style: myTextStyles.title2,
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Text(
                         'من سلسلة أذكار النوم الصحيحة',
                         textAlign: TextAlign.right,
@@ -41,11 +43,11 @@ class ArticleItemWidget extends StatelessWidget {
                     ],
                   ),
                 ),
-                const SizedBox(width: 10),
-                const FaIcon(
+                SizedBox(width: Responsive.space),
+                FaIcon(
                   FontAwesomeIcons.fileLines,
                   color: MyColors.lessBlackColor,
-                  size: 25,
+                  size: Responsive.isMobile ? 25 : 30,
                 ),
               ],
             ),

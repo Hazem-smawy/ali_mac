@@ -1,6 +1,8 @@
 import 'package:emad_app/constant/colors.dart';
 import 'package:emad_app/constant/text_styles.dart';
+import 'package:emad_app/screen/series/series_screan.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomeShowMoreBtnsWidget extends StatelessWidget {
   const HomeShowMoreBtnsWidget({super.key});
@@ -13,7 +15,9 @@ class HomeShowMoreBtnsWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.to(const SeriesScreen());
+            },
             style: ElevatedButton.styleFrom(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15)),
@@ -27,7 +31,7 @@ class HomeShowMoreBtnsWidget extends StatelessWidget {
               ),
             ),
           ),
-          const Text(
+          Text(
             'سلاسل من المرئيات',
             style: myTextStyles.subTitle,
           )

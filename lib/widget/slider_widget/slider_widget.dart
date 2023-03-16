@@ -4,6 +4,7 @@ import 'package:emad_app/constant/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dots_indicator/dots_indicator.dart';
+import 'package:get/get.dart';
 
 class SliderWidget extends StatefulWidget {
   const SliderWidget({super.key});
@@ -55,7 +56,7 @@ class _SliderWidgetState extends State<SliderWidget> {
               }),
               reverse: true,
               autoPlay: true,
-              height: 220.0,
+              height: Get.height * 0.2,
             ),
             items: sliders.map((slide) {
               return Builder(

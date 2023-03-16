@@ -1,10 +1,11 @@
 import 'package:emad_app/constant/colors.dart';
-import 'package:emad_app/contact/contact_screen.dart';
+import 'package:emad_app/constant/responsve.dart';
+import 'package:emad_app/screen/about_ali/about_ali.dart';
+import 'package:emad_app/screen/contact/contact_screen.dart';
 import 'package:emad_app/model/drawer_item.dart';
 import 'package:emad_app/screen/home/home.dart';
 import 'package:emad_app/screen/notification_screen.dart/notification_screen.dart';
 import 'package:emad_app/screen/search_screen/search_screen.dart';
-import 'package:emad_app/screen/video_sup_sereis/video_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -30,7 +31,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
   List pages = [
     const MyHomeScreen(),
     const SearchScreen(),
-    const NotificationScreen(),
+    const AboutAliScreen(),
     const ContactScreen(),
   ];
   @override
@@ -42,13 +43,14 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(40),
-      child: SafeArea(
-        child: Scaffold(
-            appBar: AppBar(
-              elevation: 0,
-              backgroundColor: Colors.transparent,
-              actions: [
+      borderRadius: BorderRadius.circular(Responsive.isMobile ? 40 : 25),
+      child: Scaffold(
+          appBar: AppBar(
+            toolbarHeight: Responsive.isMobile ? null : 90,
+            elevation: 0,
+            backgroundColor: Colors.transparent,
+            actions: [
+              if (Responsive.isMobile)
                 IconButton(
                   icon: const FaIcon(
                     FontAwesomeIcons.bars,
@@ -56,161 +58,163 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
                   ),
                   onPressed: widget.openDrawer,
                 ),
-              ],
-              title: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Expanded(
-                    child: Container(
-                      height: 50,
-                      width: double.infinity,
-                      padding: const EdgeInsets.all(5),
-                      decoration: const BoxDecoration(
-                          image: DecorationImage(
-                              fit: BoxFit.fitHeight,
-                              image: AssetImage('assets/images/top-logo.png'))),
-                      child: null,
-                    ),
-                  )
-                ],
-              ),
-              leading: GestureDetector(
-                onTap: () => Get.to(() => const NotificationScreen()),
-                child: const Center(
-                  child: FaIcon(
-                    FontAwesomeIcons.bell,
-                    color: MyColors.lessBlackColor,
-                  ),
-                ),
-              ),
-            ),
-            body: Stack(
+            ],
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                pages[index],
-                //const SizedBox(height: 75),
-
-                // Positioned(
-                //     left: 0,
-                //     right: 0,
-                //     bottom: 0,
-                //     child: AnimatedContainer(
-                //       duration: const Duration(milliseconds: 250),
-                //       height: 75,
-                //       padding: const EdgeInsets.only(
-                //           left: 10, right: 10, bottom: 10, top: 5),
-                //       color: MyColors.bg,
-                //       child: Row(
-                //         mainAxisAlignment: MainAxisAlignment.spaceAround,
-                //         children: bottomNavButtons
-                //             .map((btn) => GestureDetector(
-                //                   onTap: () {
-                //                     if (btn.id != null) {
-                //                       setState(() {
-                //                         index = btn.id!;
-                //                       });
-                //                     }
-                //                   },
-                //                   child: Container(
-                //                     padding: const EdgeInsets.all(7),
-                //                     decoration: BoxDecoration(
-                //                         color: index == btn.id
-                //                             ? MyColors.lightGreenColor
-                //                             : Colors.transparent,
-                //                         borderRadius: BorderRadius.circular(10)),
-                //                     child: Row(
-                //                       mainAxisAlignment: MainAxisAlignment.center,
-                //                       children: [
-                //                         const SizedBox(
-                //                           width: 5,
-                //                         ),
-                //                         if (index == btn.id)
-                //                           Text(
-                //                             btn.title,
-                //                             style: const TextStyle(
-                //                               fontFamily: 'Cairo',
-                //                               fontSize: 12,
-                //                               color: MyColors.bg,
-                //                               fontWeight: FontWeight.bold,
-                //                             ),
-                //                           ),
-                //                         if (index == btn.id)
-                //                           const SizedBox(width: 10),
-                //                         FaIcon(
-                //                           btn.icon,
-                //                           size: 19,
-                //                           color: index == btn.id
-                //                               ? MyColors.bg
-                //                               : MyColors.lessBlackColor,
-                //                         )
-                //                       ],
-                //                     ),
-                //                   ),
-                //                 ))
-                //             .toList(),
-                //       ),
-                //     ))
+                Expanded(
+                  child: Container(
+                    height: Responsive.isMobile ? 50 : 70,
+                    width: double.infinity,
+                    padding: const EdgeInsets.all(5),
+                    decoration: const BoxDecoration(
+                        image: DecorationImage(
+                            fit: BoxFit.fitHeight,
+                            image: AssetImage('assets/images/top-logo.png'))),
+                    child: null,
+                  ),
+                )
               ],
             ),
-            bottomNavigationBar: AnimatedContainer(
-              duration: const Duration(milliseconds: 250),
-              // height: 75,
-              padding: const EdgeInsets.only(
-                  left: 10, right: 10, bottom: 10, top: 5),
-              color: MyColors.bg,
-              child: AnimatedContainer(
-                duration: const Duration(milliseconds: 250),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: bottomNavButtons
-                      .map((btn) => GestureDetector(
-                            onTap: () {
-                              if (btn.id != null) {
-                                setState(() {
-                                  index = btn.id!;
-                                });
-                              }
-                            },
-                            child: Container(
-                              padding: const EdgeInsets.all(7),
-                              decoration: BoxDecoration(
-                                  color: index == btn.id
-                                      ? MyColors.lightGreenColor
-                                      : Colors.transparent,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  const SizedBox(
-                                    width: 5,
-                                  ),
-                                  //if (index == btn.id)
-                                  Text(
-                                    index == btn.id ? btn.title : '',
-                                    style: const TextStyle(
-                                      fontFamily: 'Cairo',
-                                      fontSize: 12,
-                                      color: MyColors.bg,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  if (index == btn.id)
-                                    const SizedBox(width: 10),
-                                  FaIcon(
-                                    btn.icon,
-                                    size: 19,
-                                    color: index == btn.id
-                                        ? MyColors.bg
-                                        : MyColors.lessBlackColor,
-                                  )
-                                ],
-                              ),
-                            ),
-                          ))
-                      .toList(),
+            leading: GestureDetector(
+              onTap: () => Get.to(() => const NotificationScreen()),
+              child: Center(
+                child: FaIcon(
+                  FontAwesomeIcons.bell,
+                  color: MyColors.lessBlackColor,
+                  size: Responsive.isMobile ? 20 : 30,
                 ),
               ),
-            )),
-      ),
+            ),
+          ),
+          body: Stack(
+            children: [
+              pages[index],
+              //const SizedBox(height: 75),
+
+              // Positioned(
+              //     left: 0,
+              //     right: 0,
+              //     bottom: 0,
+              //     child: AnimatedContainer(
+              //       duration: const Duration(milliseconds: 250),
+              //       height: 75,
+              //       padding: const EdgeInsets.only(
+              //           left: 10, right: 10, bottom: 10, top: 5),
+              //       color: MyColors.bg,
+              //       child: Row(
+              //         mainAxisAlignment: MainAxisAlignment.spaceAround,
+              //         children: bottomNavButtons
+              //             .map((btn) => GestureDetector(
+              //                   onTap: () {
+              //                     if (btn.id != null) {
+              //                       setState(() {
+              //                         index = btn.id!;
+              //                       });
+              //                     }
+              //                   },
+              //                   child: Container(
+              //                     padding: const EdgeInsets.all(7),
+              //                     decoration: BoxDecoration(
+              //                         color: index == btn.id
+              //                             ? MyColors.lightGreenColor
+              //                             : Colors.transparent,
+              //                         borderRadius: BorderRadius.circular(10)),
+              //                     child: Row(
+              //                       mainAxisAlignment: MainAxisAlignment.center,
+              //                       children: [
+              //                         const SizedBox(
+              //                           width: 5,
+              //                         ),
+              //                         if (index == btn.id)
+              //                           Text(
+              //                             btn.title,
+              //                             style: const TextStyle(
+              //                               fontFamily: 'Cairo',
+              //                               fontSize: 12,
+              //                               color: MyColors.bg,
+              //                               fontWeight: FontWeight.bold,
+              //                             ),
+              //                           ),
+              //                         if (index == btn.id)
+              //                           const SizedBox(width: 10),
+              //                         FaIcon(
+              //                           btn.icon,
+              //                           size: 19,
+              //                           color: index == btn.id
+              //                               ? MyColors.bg
+              //                               : MyColors.lessBlackColor,
+              //                         )
+              //                       ],
+              //                     ),
+              //                   ),
+              //                 ))
+              //             .toList(),
+              //       ),
+              //     ))
+            ],
+          ),
+          bottomNavigationBar: !Responsive.isMobile
+              ? null
+              : AnimatedContainer(
+                  duration: const Duration(milliseconds: 250),
+                  // height: 75,
+                  padding: const EdgeInsets.only(
+                      left: 10, right: 10, bottom: 20, top: 5),
+                  color: MyColors.bg,
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 250),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: bottomNavButtons
+                          .map((btn) => GestureDetector(
+                                onTap: () {
+                                  if (btn.id != null) {
+                                    setState(() {
+                                      index = btn.id!;
+                                    });
+                                  }
+                                },
+                                child: Container(
+                                  padding: const EdgeInsets.all(7),
+                                  decoration: BoxDecoration(
+                                      color: index == btn.id
+                                          ? MyColors.lightGreenColor
+                                          : Colors.transparent,
+                                      borderRadius: BorderRadius.circular(10)),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      const SizedBox(
+                                        width: 5,
+                                      ),
+                                      //if (index == btn.id)
+                                      Text(
+                                        index == btn.id ? btn.title : '',
+                                        style: const TextStyle(
+                                          fontFamily: 'Cairo',
+                                          fontSize: 12,
+                                          color: MyColors.bg,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      if (index == btn.id)
+                                        const SizedBox(width: 10),
+                                      FaIcon(
+                                        btn.icon,
+                                        size: 19,
+                                        color: index == btn.id
+                                            ? MyColors.bg
+                                            : MyColors.lessBlackColor,
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ))
+                          .toList(),
+                    ),
+                  ),
+                )),
     );
   }
 }

@@ -17,7 +17,7 @@ class NotificationScreen extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(10),
             alignment: Alignment.centerRight,
-            child: const Text(
+            child:  Text(
               'اليوم',
               style: myTextStyles.body,
             ),

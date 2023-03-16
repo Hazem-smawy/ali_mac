@@ -1,4 +1,5 @@
 import 'package:emad_app/constant/colors.dart';
+import 'package:emad_app/constant/responsve.dart';
 import 'package:emad_app/constant/shadows.dart';
 import 'package:emad_app/constant/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -19,10 +20,10 @@ class FatawaItemWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.all(10),
+            padding:  EdgeInsets.all(Responsive.space),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
+              children:  [
                 Expanded(
                   child: Text(
                     'هل تسوية الصفوف في صلاة الجماعة واجبة ، بمعنى أن المصلين يأثمون إذا لم يسووا الصفوف ؟.',
@@ -44,8 +45,8 @@ class FatawaItemWidget extends StatelessWidget {
             ),
           ),
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-            decoration: const BoxDecoration(
+            padding:  EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            decoration:  BoxDecoration(
               color: MyColors.lightGreenColor,
               borderRadius: BorderRadius.only(
                 topRight: Radius.circular(20),
@@ -55,7 +56,7 @@ class FatawaItemWidget extends StatelessWidget {
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const FaIcon(
+                 FaIcon(
                   FontAwesomeIcons.angleLeft,
                   color: MyColors.bg,
                   size: 17,

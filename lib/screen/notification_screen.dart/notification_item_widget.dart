@@ -21,7 +21,7 @@ class NotificationItemWidget extends StatelessWidget {
             padding: const EdgeInsets.all(10),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: const [
+              children:  [
                 Expanded(
                   child: Text(
                     'روائع ابن القيم رحمه الله',

@@ -89,6 +89,7 @@ class AppThemes {
 
   //the light theme
   static final ThemeData lightTheme = ThemeData(
+    useMaterial3: false,
     brightness: Brightness.light,
     fontFamily: font1,
     scaffoldBackgroundColor: _lightBackgroundColor,

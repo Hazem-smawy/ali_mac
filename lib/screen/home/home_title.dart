@@ -1,4 +1,5 @@
 import 'package:emad_app/constant/colors.dart';
+import 'package:emad_app/constant/responsve.dart';
 import 'package:emad_app/constant/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -12,13 +13,13 @@ class HomeTitleWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        const FaIcon(
+        FaIcon(
           FontAwesomeIcons.mosque,
-          size: 30,
+          size: Responsive.isMobile ? 30 : 50,
           color: MyColors.blueColor,
         ),
-        const SizedBox(height: 5),
-        const Text(
+         SizedBox(height: Responsive.isMobile ?5: 10 ),
+        Text(
           'المرئيات',
           style: myTextStyles.title1,
         ),

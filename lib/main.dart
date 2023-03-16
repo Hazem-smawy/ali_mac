@@ -1,14 +1,16 @@
+import 'package:emad_app/constant/responsve.dart';
 import 'package:emad_app/constant/theme.dart';
 import 'package:emad_app/screen/main_page/main_page_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
+  Responsive responsive = Get.put(Responsive());
 
   // This widget is the root of your application.
   @override

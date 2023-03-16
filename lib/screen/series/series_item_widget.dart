@@ -23,11 +23,11 @@ class SeriesItemWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                const Text(
+                 Text(
                   'سلسة',
                   style: myTextStyles.body,
                 ),
-                const Text(
+                 Text(
                   'روائع ابن القيم رحمه الله',
                   textAlign: TextAlign.right,
                   textDirection: TextDirection.rtl,
@@ -46,7 +46,7 @@ class SeriesItemWidget extends StatelessWidget {
                       ),
                     ),
                     Expanded(child: Container()),
-                    const Text(
+                     Text(
                       'محتوى',
                       style: myTextStyles.subTitle,
                     ),

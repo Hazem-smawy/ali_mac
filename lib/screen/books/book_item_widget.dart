@@ -25,7 +25,7 @@ class BookItemWidget extends StatelessWidget {
                   width: double.infinity,
                   fit: BoxFit.cover,
                 )),
-            const Padding(
+             Padding(
               padding: EdgeInsets.all(8.0),
               child: Text(
                 'الآثار العقدية الواردة عن الخلفاء الراشدينالأربعة يق 7-4-2022 (1)',

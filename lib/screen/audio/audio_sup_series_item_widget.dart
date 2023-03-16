@@ -1,3 +1,4 @@
+import 'package:emad_app/constant/responsve.dart';
 import 'package:flutter/material.dart';
 import 'package:emad_app/constant/colors.dart';
 import 'package:emad_app/constant/shadows.dart';
@@ -11,7 +12,7 @@ class AudioSupSeriesItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(top: 15),
-      padding: const EdgeInsets.all(10),
+      padding: EdgeInsets.all(Responsive.space),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: MyColors.bg,
@@ -31,7 +32,7 @@ class AudioSupSeriesItemWidget extends StatelessWidget {
                 style: myTextStyles.body
                     .copyWith(color: MyColors.secondaryTextColor),
               ),
-              const Text(
+              Text(
                 'حكم المعلقات في صحيح البخاري ',
                 textAlign: TextAlign.right,
                 textDirection: TextDirection.rtl,
@@ -40,18 +41,18 @@ class AudioSupSeriesItemWidget extends StatelessWidget {
               const SizedBox(height: 10),
               Row(
                 children: [
-                  const FaIcon(
+                  FaIcon(
                     FontAwesomeIcons.download,
                     color: MyColors.lightGreenColor,
-                    size: 20,
+                    size: Responsive.iconSize,
                   ),
                   const SizedBox(
                     width: 20,
                   ),
-                  const FaIcon(
+                  FaIcon(
                     FontAwesomeIcons.play,
                     color: MyColors.lightGreenColor,
-                    size: 20,
+                    size: Responsive.iconSize,
                   ),
                   const SizedBox(
                     width: 10,
@@ -61,12 +62,13 @@ class AudioSupSeriesItemWidget extends StatelessWidget {
               )
             ],
           )),
-          const SizedBox(width: 10),
-          const Padding(
-            padding: EdgeInsets.all(8.0),
+          SizedBox(width: Responsive.space),
+          Padding(
+            padding: const EdgeInsets.all(5),
             child: FaIcon(
               FontAwesomeIcons.microphone,
               color: MyColors.lightGreenColor,
+              size: Responsive.isMobile ? 25 : 30,
             ),
           ),
         ],

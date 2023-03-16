@@ -26,7 +26,7 @@ class HomeVideoItemWidget extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 10),
-          const Padding(
+           Padding(
             padding: EdgeInsets.only(right: 10),
             child: Text(
               'مقدمة علم تخريج الحديث',
