@@ -40,7 +40,7 @@ dependencies:
   dots_indicator:
   get:
   google_nav_bar: ^5.0.6
-
+  youtube_player_flutter: ^8.0.0+2
 
 dev_dependencies:
   flutter_test:

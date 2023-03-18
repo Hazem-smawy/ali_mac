@@ -1,5 +1,5 @@
 import 'package:emad_app/screen/series/series_item_widget.dart';
-import 'package:emad_app/screen/video_sup_sereis/video_sup_series_screen.dart';
+import 'package:emad_app/screen/video/video_sup_series_screen.dart';
 import 'package:emad_app/widget/app_bar/app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

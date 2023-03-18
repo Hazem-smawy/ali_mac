@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 
 var myAppBar = AppBar(
   backgroundColor: Colors.white,
-  elevation: 2,
+  elevation: 0,
   leading: const Text(''),
   actions: [
     GestureDetector(

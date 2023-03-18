@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 import 'package:emad_app/constant/colors.dart';
 import 'package:emad_app/constant/responsve.dart';
@@ -6,7 +5,6 @@ import 'package:emad_app/constant/text_styles.dart';
 import 'package:emad_app/model/drawer_item.dart';
 import 'package:emad_app/screen/about_ali/about_ali.dart';
 import 'package:emad_app/screen/books/books_screen.dart';
-import 'package:emad_app/screen/bottom_nav_screen/bottom_nav_screen.dart';
 import 'package:emad_app/screen/contact/contact_screen.dart';
 import 'package:emad_app/screen/fatawa_screen/fatawa_screen.dart';
 import 'package:emad_app/screen/main_page/main_page_screen.dart';
@@ -57,25 +55,25 @@ class DrawerWidget extends StatelessWidget {
                 Get.to(() => const AboutAliScreen());
               }
               if (e.id == 3) {
-                Get.to(const SeriesScreen());
+                Get.to(()=>const SeriesScreen());
               }
               if (e.id == 4) {
-                Get.to(const SeriesScreen());
+                Get.to(()=>const SeriesScreen());
               }
               if (e.id == 5) {
-                Get.to(const FatawaScreen());
+                Get.to(()=>const FatawaScreen());
               }
               if (e.id == 6) {
-                Get.to(const BooksScreen());
+                Get.to(()=>const BooksScreen());
               }
               if (e.id == 7) {
-                Get.to(const BooksScreen());
+                Get.to(()=>const BooksScreen());
               }
               if (e.id == 8) {
-                Get.to(const ContactScreen());
+                Get.to(()=>const ContactScreen());
               }
               if (e.id == 9) {
-                Get.to(const ContactScreen());
+                Get.to(()=>const ContactScreen());
               }
             },
             trailing: FaIcon(
